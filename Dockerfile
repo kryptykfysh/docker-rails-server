@@ -51,4 +51,3 @@ RUN git clone https://github.com/OiNutter/nodenv.git ~/.nodenv && \
 
 # Startup commands
 ENTRYPOINT /bin/bash
-
