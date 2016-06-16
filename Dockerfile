@@ -31,9 +31,9 @@ RUN git clone https://github.com/sstephenson/rbenv.git ~/.rbenv && \
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build && \
   git clone https://github.com/sstephenson/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars && \
   . ~/.bashrc && \
-  rbenv install 2.2.3 && \
+  rbenv install 2.3.1 && \
   rbenv rehash && \
-  rbenv global 2.2.3 && \
+  rbenv global 2.3.1 && \
   gem update --system && \
   gem install pry pry-doc rails
 
@@ -45,9 +45,11 @@ RUN git clone https://github.com/OiNutter/nodenv.git ~/.nodenv && \
   git clone git://github.com/OiNutter/node-build.git ~/.nodenv/plugins/node-build && \
   git clone https://github.com/OiNutter/nodenv-vars.git ~/.nodenv/plugins/nodenv-vars && \
   . ~/.bashrc && \
-  nodenv install 0.12.4 && \
+  nodenv install 0.12.14 && \
   nodenv rehash && \
-  nodenv global 0.12.4
+  nodenv global 0.12.14 && \
+  npm install -g npm && \
+  npm install -g bower
 
 # Startup commands
 ENTRYPOINT /bin/bash
